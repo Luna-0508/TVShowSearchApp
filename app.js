@@ -18,3 +18,10 @@ const displayImg = shows => {
     }
   }
 };
+
+const imageReset = form.addEventListener("click", function () {
+  const imgs = document.querySelectorAll("img");
+  for (let img of imgs) {
+    img.remove();
+  }
+});
