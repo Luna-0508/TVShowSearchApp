@@ -11,8 +11,10 @@ form.addEventListener("submit", async function (e) {
 
 const displayImg = shows => {
   for (let result of shows) {
-    const img = document.createElement("img");
-    img.src = result.show.image.medium;
-    document.body.append(img);
+    if (result.show.image) {
+      const img = document.createElement("img");
+      img.src = result.show.image.medium;
+      document.body.append(img);
+    }
   }
 };
